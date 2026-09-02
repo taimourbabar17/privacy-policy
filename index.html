@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Block Puzzle Master</title>
-<meta name="description" content="Privacy Policy for Block Puzzle Master: what data is collected, what stays on your device, and how advertising works.">
+<meta name="description" content="Privacy Policy for Block Puzzle Master: what data is collected, what stays on your device, how notifications work, and how advertising works.">
 <style>
   :root {
     --paper: #f5f6fa;
@@ -176,6 +176,8 @@
     font-size: 14px; margin-right: 10px;
   }
   h2 { font-size: 24px; margin: 0 0 16px; display: flex; align-items: baseline; }
+  h3.sub-head { font-size: 16px; margin: 24px 0 10px; }
+  h3.sub-head:first-child { margin-top: 0; }
 
   .card {
     background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
@@ -233,17 +235,17 @@
   <div class="masthead-inner">
     <p class="eyebrow"><span class="dot"></span>Block Puzzle Master</p>
     <h1 class="title">Privacy Policy</h1>
-    <p class="subtitle">This page explains what information Block Puzzle Master collects, what stays only on your device, and how the app's advertising works.</p>
+    <p class="subtitle">This page explains what information Block Puzzle Master collects, what stays only on your device, how optional reminder notifications work, and how advertising works.</p>
     <div class="meta-row">
-      <span class="meta-chip"><b>Effective:</b> <span class="placeholder">5 August 2026 — confirm before publishing</span></span>
-      <span class="meta-chip"><b>App version:</b> 1.0.0</span>
+      <span class="meta-chip"><b>Effective:</b> 2 September 2026</span>
+      <span class="meta-chip"><b>App version:</b> 1.0.2</span>
       <span class="meta-chip"><b>Platform:</b> Android</span>
     </div>
     <div class="glance">
       <div class="glance-card"><div class="k">Account required</div><div class="v">No</div></div>
       <div class="glance-card"><div class="k">Personal data we collect</div><div class="v">None</div></div>
       <div class="glance-card"><div class="k">Where progress is stored</div><div class="v">On your device only</div></div>
-      <div class="glance-card"><div class="k">Advertising</div><div class="v">Google AdMob</div></div>
+      <div class="glance-card"><div class="k">Third-party services</div><div class="v">Google AdMob &amp; Firebase</div></div>
     </div>
   </div>
 </header>
@@ -257,6 +259,7 @@
         <li><a href="#not-collected">Information we don't collect</a></li>
         <li><a href="#on-device">Information stored on your device</a></li>
         <li><a href="#ads">Advertising (Google AdMob)</a></li>
+        <li><a href="#notifications">Notifications &amp; Firebase</a></li>
         <li><a href="#permissions">App permissions</a></li>
         <li><a href="#children">Children's privacy</a></li>
         <li><a href="#sharing">Data sharing &amp; sale</a></li>
@@ -278,6 +281,7 @@
           <li><a href="#not-collected">Information we don't collect</a></li>
           <li><a href="#on-device">Information stored on your device</a></li>
           <li><a href="#ads">Advertising (Google AdMob)</a></li>
+          <li><a href="#notifications">Notifications &amp; Firebase</a></li>
           <li><a href="#permissions">App permissions</a></li>
           <li><a href="#children">Children's privacy</a></li>
           <li><a href="#sharing">Data sharing &amp; sale</a></li>
@@ -293,12 +297,12 @@
     <section class="policy-section" id="overview">
       <h2><span class="section-num">1</span>Overview</h2>
       <p>Block Puzzle Master ("the app," "we," "us") is a block-placement puzzle game. This policy applies to the app across Classic, Daily Challenge, and Adventure modes, and to the version distributed on Google Play (and any other store we later publish to).</p>
-      <p>In short: the app doesn't ask you to create an account, doesn't collect your name, email, or any personal information, and doesn't access your contacts, camera, microphone, or location. Your scores and progress are saved only on your own device. The one third-party service the app uses is Google AdMob, to show ads — details on exactly what that involves are in <a href="#ads">Section 4</a>.</p>
+      <p>In short: the app doesn't ask you to create an account, doesn't collect your name, email, or any personal information, and doesn't access your contacts, camera, microphone, or location. Your scores and progress are saved only on your own device. Two Google services are used behind the scenes: <strong>Google AdMob</strong> to show ads (<a href="#ads">Section 4</a>), and <strong>Google Firebase</strong> to deliver optional reminder notifications and remotely tune non-personal in-app content (<a href="#notifications">Section 5</a>).</p>
     </section>
 
     <section class="policy-section" id="not-collected">
       <h2><span class="section-num">2</span>Information we don't collect</h2>
-      <p>The app has no login, no chat or social features, and requests no device permissions beyond internet access (see <a href="#permissions">Section 5</a>). Specifically, we never ask for or access:</p>
+      <p>The app has no login and no chat or social features. Specifically, we never ask for or access:</p>
       <div class="cols-2">
         <div class="check-card no">
           <h3>Not collected by the app</h3>
@@ -317,22 +321,25 @@
             <li><span class="mark">✓</span>Sound / music preferences</li>
             <li><span class="mark">✓</span>Daily Challenge &amp; Adventure progress</li>
             <li><span class="mark">✓</span>Your in-progress game, so you can resume it</li>
+            <li><span class="mark">✓</span>Your reminder-notification on/off choice</li>
           </ul>
         </div>
       </div>
+      <div class="callout">The one exception, described fully in <a href="#notifications">Section 5</a>: if you turn reminder notifications on, Google Firebase generates an anonymous device messaging token so it can deliver them. That token identifies your device installation for message delivery only — it is not your name, email, or any other personal identifier, and we never see or store it ourselves.</div>
     </section>
 
     <section class="policy-section" id="on-device">
       <h2><span class="section-num">3</span>Information stored on your device</h2>
-      <p>To remember your progress between sessions, the app keeps a small local database on your device (using an on-device storage library called Hive). This data is never uploaded to a server we operate, and we have no way to see it. It contains:</p>
+      <p>To remember your progress and preferences between sessions, the app keeps a small local database on your device (using an on-device storage library called Hive). This data is never uploaded to a server we operate, and we have no way to see it. It contains:</p>
       <ul>
         <li>Your high score and total games played</li>
-        <li>Total lines cleared, used for lifetime stats and Daily Challenge / Adventure objective tracking</li>
+        <li>Total lines cleared, best combo streak, and highest single-move score, used for lifetime stats and Daily Challenge / Adventure objective tracking</li>
         <li>Sound and music on/off preferences</li>
-        <li>Daily Challenge completion streak</li>
+        <li>Daily Challenge completion streak and last-played date</li>
         <li>Adventure Mode level progress</li>
         <li>A snapshot of any game you exit mid-session, so you can pick up where you left off (Resume Game)</li>
         <li>Whether you've already used your one free Extra Life for the current run</li>
+        <li>Whether you've turned reminder notifications on, and whether you've already seen the one-time notification permission prompt</li>
       </ul>
       <p>This information stays on your device for as long as the app is installed. Uninstalling the app, or clearing its storage in your device's <em>Settings → Apps → Block Puzzle Master → Storage</em>, permanently deletes it. We cannot recover it for you, because we never had a copy.</p>
     </section>
@@ -356,67 +363,87 @@
         <li><a href="https://www.google.com/about/company/user-consent-policy/" target="_blank" rel="noopener">Google's EU User Consent Policy</a></li>
         <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How AdMob uses data</a></li>
       </ul>
-      <div class="callout">Internet access is requested by the app <strong>solely</strong> so these ads can load — the app has no other need for network connectivity, and gameplay itself works fully offline.</div>
+      <div class="callout">Internet access is requested by the app so ads can load and so the notification/config features in <a href="#notifications">Section 5</a> can work — gameplay itself works fully offline.</div>
+    </section>
+
+    <section class="policy-section" id="notifications">
+      <h2><span class="section-num">5</span>Notifications &amp; Firebase</h2>
+      <p>The app uses <strong>Google Firebase</strong> for two things, both unrelated to advertising: optional reminder notifications, and remotely adjusting a small number of non-personal in-app values (for example, the text shown in a reminder).</p>
+
+      <h3 class="sub-head">Reminder notifications</h3>
+      <p>You can turn on optional daily reminders from the in-app Settings menu — a Daily Challenge reminder each morning and a game reminder each evening. This is off by default and entirely your choice; the app asks Android for notification permission only if and when you turn this on.</p>
+      <ul>
+        <li>Most reminders are scheduled <strong>locally on your device</strong> (via the device's own OS notification scheduler), and re-registered after a restart so they still fire on time.</li>
+        <li>If your device also supports it, the app registers with <strong>Firebase Cloud Messaging (FCM)</strong> so reminder content can be delivered or refreshed as a push message. This assigns your device installation an anonymous messaging token, generated and held by Google/Firebase — see the callout in <a href="#not-collected">Section 2</a>.</li>
+      </ul>
+
+      <h3 class="sub-head">Remote configuration</h3>
+      <p><strong>Firebase Remote Config</strong> lets us adjust small, non-personal values already built into the app (like reminder wording) without shipping an app update. It does not collect personal information; Google processes standard app-instance/technical data to serve the configuration, similar in nature to the technical data described in <a href="#ads">Section 4</a>.</p>
+
+      <div class="callout">You can turn reminders off at any time from in-app Settings, or deny/revoke the notification permission from your device's own <em>Settings → Apps → Block Puzzle Master → Notifications</em> — either way, no further reminders are scheduled or delivered. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy &amp; security information</a> for how Google handles this data.</div>
     </section>
 
     <section class="policy-section" id="permissions">
-      <h2><span class="section-num">5</span>App permissions</h2>
-      <p>Block Puzzle Master requests exactly one Android permission:</p>
+      <h2><span class="section-num">6</span>App permissions</h2>
+      <p>Block Puzzle Master requests the following Android permissions:</p>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Permission</th><th>Why it's needed</th></tr></thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Required to request and display ads via Google AdMob. Not used for anything else.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Required to request/display ads (AdMob) and to send/receive reminder notifications and remote configuration (Firebase).</td></tr>
+            <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Lets the app check whether a network connection is available before requesting an ad or a Firebase update, rather than failing silently.</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Required by Android to show any notification at all. Only requested at the moment you turn reminders on in Settings — never at first launch.</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Lets the app re-register your already-scheduled reminders after your device restarts (Android clears scheduled alarms on reboot otherwise). Used only if you've turned reminders on; does not run the full app in the background.</td></tr>
           </tbody>
         </table>
       </div>
-      <p>No other permission — location, camera, microphone, contacts, storage, or notifications — is requested at install or run time.</p>
+      <p>No other permission — location, camera, microphone, contacts, or storage — is requested at install or run time.</p>
     </section>
 
     <section class="policy-section" id="children">
-      <h2><span class="section-num">6</span>Children's privacy</h2>
-      <p>Block Puzzle Master does not knowingly collect personal information from children. The app itself collects no personal information from any player, of any age, as described in <a href="#not-collected">Section 2</a>.</p>
+      <h2><span class="section-num">7</span>Children's privacy</h2>
+      <p>Block Puzzle Master does not knowingly collect personal information from children. The app itself collects no personal information from any player, of any age, as described in <a href="#not-collected">Section 2</a>. Reminder notifications (<a href="#notifications">Section 5</a>) are opt-in and are never personalized based on anything other than the time of day.</p>
       <p>Because the app shows ads via Google AdMob, if you believe this app may be used by, or directed at, children under 13 (or the relevant age of consent in your region), we configure AdMob's ad requests accordingly (for example, requesting non-personalized ads and applying Google's child-directed treatment / ad content filtering settings) so that ad serving complies with COPPA and similar regulations.</p>
       <div class="callout"><strong>Note for the developer:</strong> confirm the app's intended audience in Google Play Console's target-audience declaration, and set AdMob's <em>"Tag for child-directed treatment"</em> / <em>"Tag for users under the age of consent"</em> to match before publishing.</div>
     </section>
 
     <section class="policy-section" id="sharing">
-      <h2><span class="section-num">7</span>Data sharing &amp; sale</h2>
-      <p>We do not sell, rent, or trade personal data — we don't collect any to begin with. We do not operate any server that stores player accounts, scores, or gameplay data. The only outside party involved in the app at all is Google, acting as an independent service provider for advertising as described in <a href="#ads">Section 4</a>.</p>
+      <h2><span class="section-num">8</span>Data sharing &amp; sale</h2>
+      <p>We do not sell, rent, or trade personal data — we don't collect any to begin with. We do not operate any server that stores player accounts, scores, or gameplay data. The only outside party involved in the app is Google, acting as an independent service provider for two separate purposes: advertising via AdMob (<a href="#ads">Section 4</a>), and reminder delivery / remote configuration via Firebase (<a href="#notifications">Section 5</a>).</p>
     </section>
 
     <section class="policy-section" id="security">
-      <h2><span class="section-num">8</span>Data security</h2>
-      <p>Because your progress is stored only on your device rather than transmitted to servers we control, its protection depends on your device's own security (screen lock, OS-level app sandboxing, and encryption where your device provides it). Since we never receive or store this data ourselves, there is no server-side database of player information that could be breached on our end.</p>
+      <h2><span class="section-num">9</span>Data security</h2>
+      <p>Because your progress is stored only on your device rather than transmitted to servers we control, its protection depends on your device's own security (screen lock, OS-level app sandboxing, and encryption where your device provides it). We do not operate a server-side database of player information ourselves. If you enable reminder notifications, Google/Firebase's own infrastructure briefly holds a device messaging token to deliver them — governed by Google's security practices, not ours.</p>
     </section>
 
     <section class="policy-section" id="choices">
-      <h2><span class="section-num">9</span>Your choices</h2>
+      <h2><span class="section-num">10</span>Your choices</h2>
       <ul>
         <li><strong>Clear your local data</strong> — uninstall the app, or go to <em>Settings → Apps → Block Puzzle Master → Storage → Clear storage</em> on your device.</li>
         <li><strong>Turn sound or music off</strong> — from the in-app Settings menu; this preference is saved locally.</li>
+        <li><strong>Turn reminder notifications off</strong> — from the in-app Settings menu, or by revoking notification permission in your device's <em>Settings → Apps → Block Puzzle Master → Notifications</em>.</li>
         <li><strong>Opt out of personalized ads</strong> — on Android, go to <em>Settings → Google → Ads</em> and turn on "Opt out of Ads Personalization," or reset your advertising ID from the same screen.</li>
-        <li><strong>Requests about data Google processes</strong> — because that processing is Google's, not ours, requests to access or delete it are handled through <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google's own privacy controls</a>.</li>
+        <li><strong>Requests about data Google processes</strong> — because that processing (AdMob and Firebase alike) is Google's, not ours, requests to access or delete it are handled through <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google's own privacy controls</a>.</li>
       </ul>
     </section>
 
     <section class="policy-section" id="international">
-      <h2><span class="section-num">10</span>International users</h2>
-      <p>The app is available globally. Because AdMob operates a global advertising network, the limited technical and advertising data described in <a href="#ads">Section 4</a> may be processed in countries other than the one you're playing in, under Google's own cross-border safeguards.</p>
+      <h2><span class="section-num">11</span>International users</h2>
+      <p>The app is available globally. Because AdMob and Firebase both operate global infrastructure, the limited technical, advertising, and messaging data described in <a href="#ads">Section 4</a> and <a href="#notifications">Section 5</a> may be processed in countries other than the one you're playing in, under Google's own cross-border safeguards.</p>
     </section>
 
     <section class="policy-section" id="changes">
-      <h2><span class="section-num">11</span>Changes to this policy</h2>
+      <h2><span class="section-num">12</span>Changes to this policy</h2>
       <p>If this policy changes — for example, if a new feature changes what data is involved — we'll update this page and change the "Effective" date at the top. We encourage checking back occasionally. Continued use of the app after an update means you accept the revised policy.</p>
     </section>
 
     <section class="policy-section" id="contact">
-      <h2><span class="section-num">12</span>Contact us</h2>
+      <h2><span class="section-num">13</span>Contact us</h2>
       <div class="card">
         <p style="margin-bottom:14px;">Questions about this policy or how the app handles data can be sent to:</p>
-        <p style="margin-bottom:6px;"><strong>Developer:</strong> <span class="placeholder">[Your developer / studio name]</span></p>
-        <p style="margin-bottom:6px;"><strong>Email:</strong> <span class="placeholder">[your-support-email@example.com]</span></p>
-        <p style="margin-bottom:0;"><strong>Address</strong> <em>(optional, some regions require one)</em>: <span class="placeholder">[Optional business address]</span></p>
+        <p style="margin-bottom:6px;"><strong>Developer:</strong> EpicPixel_007</p>
+        <p style="margin-bottom:0;"><strong>Email:</strong> <a href="mailto:taimour17@gmail.com">taimour17@gmail.com</a></p>
       </div>
     </section>
   </main>
